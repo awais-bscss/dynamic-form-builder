@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fdfaf8;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --bg-input: #ffffff;
+  --bg-input-focus: #ffffff;
+
+  --accent-primary: #F15A22;
+  --accent-primary-hover: #d94812;
+  --accent-primary-glow: rgba(241, 90, 34, 0.18);
+  --accent-secondary: #F15A22;
+  --accent-secondary-glow: rgba(241, 90, 34, 0.12);
+  --accent-gradient: linear-gradient(135deg, #F15A22, #ea580c);
+
+  --color-error: #ef4444;
+  --color-error-bg: rgba(239, 68, 68, 0.08);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-accent: #F15A22;
+
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --border-accent: rgba(241, 90, 34, 0.45);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+  --space-3xl: 3rem;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 5px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+  --radius-full: 4px;
+
+  --shadow-glow: 0 4px 16px rgba(241, 90, 34, 0.25);
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-xs: 0.75rem;
+  --font-sm: 0.8125rem;
+  --font-base: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.125rem;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
