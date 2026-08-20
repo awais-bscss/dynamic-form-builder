@@ -1,0 +1,187 @@
+.fieldConfigurator {
+  margin-bottom: var(--space-xl);
+}
+
+.configuratorToggle {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-glow);
+}
+
+.configuratorToggle:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.configuratorToggle.expanded {
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-secondary);
+  box-shadow: none;
+  color: var(--text-primary);
+}
+
+.configuratorToggleIcon {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.configuratorPanel {
+  margin-top: var(--space-md);
+  padding: var(--space-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-xl);
+  animation: fadeIn var(--transition-normal);
+}
+
+.configuratorTypes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.typeChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-primary);
+  background: var(--bg-input);
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-size: var(--font-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.typeChip:hover {
+  background: var(--bg-input-focus);
+  color: var(--text-primary);
+  border-color: var(--border-secondary);
+}
+
+.typeChip.active {
+  background: var(--accent-primary-glow);
+  color: var(--text-accent);
+  border-color: var(--border-accent);
+  box-shadow: 0 0 12px var(--accent-primary-glow);
+}
+
+.configuratorForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.configField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.configRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.configLabel {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.configRequired {
+  color: var(--color-error);
+}
+
+.configHint {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.configInput {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.configInput:focus {
+  border-color: var(--accent-primary);
+  outline: none;
+}
+
+.configInput::placeholder {
+  color: var(--text-muted);
+}
+
+.configCheckboxField {
+  padding: var(--space-xs) 0;
+}
+
+.configCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.configCheckbox {
+  accent-color: var(--accent-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.configAddBtn {
+  flex: 1;
+}
+
+.configActions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.configuratorToggle.editing {
+  background: var(--accent-primary-glow);
+  border: 1px solid var(--border-accent);
+  box-shadow: none;
+  color: var(--accent-primary);
+}
+
+@media (max-width: 480px) {
+  .configRow {
+    grid-template-columns: 1fr;
+  }
+}
