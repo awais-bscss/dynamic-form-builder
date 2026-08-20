@@ -103,13 +103,6 @@
   transition: all var(--transition-fast);
 }
 
-.moveBtn {
-  width: 28px;
-  padding: 0;
-  font-size: 13px;
-  font-weight: bold;
-}
-
 .editBtn {
   color: var(--accent-primary);
   border-color: rgba(241, 90, 34, 0.25);

@@ -11,7 +11,6 @@ export default function FormBuilder({
   onAddField,
   onUpdateField,
   onRemoveField,
-  onMoveField,
   onClearAll,
   onLoadPreset
 }) {
@@ -75,12 +74,9 @@ export default function FormBuilder({
                 key={field.id}
                 field={field}
                 index={index}
-                total={fields.length}
                 isEditing={editingField?.id === field.id}
                 onRemove={onRemoveField}
                 onEdit={() => setEditingField(field)}
-                onMoveUp={(idx) => onMoveField(idx, idx - 1)}
-                onMoveDown={(idx) => onMoveField(idx, idx + 1)}
               />
             ))
           )}

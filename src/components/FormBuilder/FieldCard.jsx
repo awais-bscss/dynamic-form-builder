@@ -1,7 +1,7 @@
 import { TYPE_BADGES } from '../../constants/formConstants';
 import styles from './FieldCard.module.css';
 
-export default function FieldCard({ field, index, total, isEditing, onRemove, onEdit, onMoveUp, onMoveDown }) {
+export default function FieldCard({ field, index, isEditing, onRemove, onEdit }) {
   const badge = TYPE_BADGES[field.type] || { label: field.type };
 
   return (
@@ -37,24 +37,6 @@ export default function FieldCard({ field, index, total, isEditing, onRemove, on
       </div>
 
       <div className={styles.fieldCardActions}>
-        <button
-          type="button"
-          className={`${styles.fieldActionBtn} ${styles.moveBtn}`}
-          onClick={() => onMoveUp(index)}
-          disabled={index === 0}
-          title="Move field up"
-        >
-          ↑
-        </button>
-        <button
-          type="button"
-          className={`${styles.fieldActionBtn} ${styles.moveBtn}`}
-          onClick={() => onMoveDown(index)}
-          disabled={index === total - 1}
-          title="Move field down"
-        >
-          ↓
-        </button>
         <button
           type="button"
           className={`${styles.fieldActionBtn} ${styles.editBtn}`}

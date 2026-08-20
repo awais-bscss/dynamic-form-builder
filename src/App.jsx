@@ -44,16 +44,6 @@ export default function App() {
     setFields((prev) => prev.map((f) => f.id === updatedField.id ? updatedField : f));
   };
 
-  const handleMoveField = (fromIndex, toIndex) => {
-    if (toIndex < 0 || toIndex >= fields.length) return;
-    setFields((prev) => {
-      const next = [...prev];
-      const [moved] = next.splice(fromIndex, 1);
-      next.splice(toIndex, 0, moved);
-      return next;
-    });
-  };
-
   const handleClearAll = () => {
     if (window.confirm('Are you sure you want to remove all fields?')) {
       setFields([]);
@@ -80,7 +70,6 @@ export default function App() {
           onAddField={handleAddField}
           onUpdateField={handleUpdateField}
           onRemoveField={handleRemoveField}
-          onMoveField={handleMoveField}
           onClearAll={handleClearAll}
           onLoadPreset={handleLoadPreset}
         />

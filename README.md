@@ -9,7 +9,6 @@ A dynamic form builder and live preview application built with React and Vite. U
 ### Form Builder (Left Panel)
 - Add new fields with configurable type, label, placeholder, and validation rules
 - Edit existing fields inline
-- Reorder fields using Move Up / Move Down buttons
 - Delete individual fields or clear all at once
 - Load preset templates with one click
 
@@ -103,7 +102,7 @@ App.jsx (fields state + localStorage sync)
   |
   |-- FormBuilder (left panel)
   |     |-- FieldConfigurator (add/edit fields)
-  |     |-- FieldCard[] (display + reorder + delete)
+  |     |-- FieldCard[] (display + edit + delete)
   |
   |-- FormPreview (right panel)
         |-- DynamicField[] (render inputs by type)
@@ -112,7 +111,7 @@ App.jsx (fields state + localStorage sync)
 ```
 
 - `App.jsx` owns the `fields` array and passes it down to both panels
-- FormBuilder modifies fields via callbacks (`onAddField`, `onUpdateField`, `onRemoveField`, `onMoveField`)
+- FormBuilder modifies fields via callbacks (`onAddField`, `onUpdateField`, `onRemoveField`)
 - FormPreview reads fields and manages its own `formValues`, `errors`, and `submittedData` state
 
 ---

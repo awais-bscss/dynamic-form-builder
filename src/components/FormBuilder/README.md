@@ -1,6 +1,6 @@
 # FormBuilder
 
-The left panel of the app lets users create, configure, edit, reorder, and delete form fields.
+The left panel of the app lets users create, configure, edit, and delete form fields.
 
 ## Files
 
@@ -14,7 +14,6 @@ The main container component for the builder panel.
 | `onAddField` | `Function` | Callback to add a new field |
 | `onUpdateField` | `Function` | Callback to update an existing field |
 | `onRemoveField` | `Function` | Callback to remove a field by ID |
-| `onMoveField` | `Function` | Callback to reorder fields (fromIndex, toIndex) |
 | `onClearAll` | `Function` | Callback to clear all fields |
 | `onLoadPreset` | `Function` | Callback to load a preset template |
 
@@ -69,15 +68,11 @@ Displays a single field as a card in the builder's field list.
 |------|------|-------------|
 | `field` | `Object` | The field data to display |
 | `index` | `Number` | Position index in the fields array |
-| `total` | `Number` | Total number of fields |
 | `isEditing` | `Boolean` | Whether this field is currently being edited |
 | `onRemove` | `Function` | Callback to delete the field |
 | `onEdit` | `Function` | Callback to enter edit mode for this field |
-| `onMoveUp` | `Function` | Callback to move field up |
-| `onMoveDown` | `Function` | Callback to move field down |
 
 **Key Behavior:**
 - Shows type badge, "Required" tag, label, placeholder text, and validation rules
-- Move Up is disabled for the first field, Move Down is disabled for the last
 - Highlights with a different style when `isEditing` is true
 - Each card has a staggered entrance animation (`animationDelay` based on index)
